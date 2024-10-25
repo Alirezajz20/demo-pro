@@ -1,3 +1,25 @@
+//غیرفعال کردن inspect
+ document.addEventListener('contextmenu', function(event) {
+     event.preventDefault();
+ });
+ 
+   
+      document.addEventListener('keydown', function(event) {
+         if (event.key === "F12") {
+             event.preventDefault(); 
+         }
+     });
+
+     document.addEventListener('keydown', function(event) {
+         if (event.key === "F12" || 
+             (event.ctrlKey && event.shiftKey && event.key == 'i') || 
+             (event.ctrlKey && event.shiftKey && event.key == 'j') || 
+             (event.ctrlKey && event.key === 'u')) {
+             event.preventDefault();
+         }
+     });
+//غیرفعال کردن inspect
+
 const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
